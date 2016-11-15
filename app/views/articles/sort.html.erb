@@ -1,0 +1,17 @@
+<header class = 'topstuff'> <h1> BLOGGY <h1></header>
+	<nav>
+	<%= link_to 'My Blogs', controller: 'articles' %>
+	
+    <%= link_to 'New Article', new_article_path %>
+</nav>
+
+<section id='box'>
+  <% @articles.each do |article| %>
+ 
+<ul id= "sortable1" class= "connectedSortable">
+  <li class="ui-state-default" id= '1'> <%= article.title %></li>
+  <li class="ui-state-default" id= '2'></li>
+ 
+  <% end %>
+
+</section>
